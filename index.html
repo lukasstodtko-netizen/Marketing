@@ -270,8 +270,19 @@
   .bar-fill.teal{background:linear-gradient(90deg, var(--teal), var(--teal-deep));}
   .bar-row .val{font-family:var(--font-mono); font-size:13.5px; color:var(--on-navy); text-align:right; font-variant-numeric:tabular-nums;}
 
-  .demo-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
-  @media (max-width:800px){ .demo-grid{grid-template-columns:1fr; gap:36px;} }
+  .demo-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:40px;}
+  @media (max-width:980px){ .demo-grid{grid-template-columns:1fr 1fr; gap:32px;} }
+  @media (max-width:640px){ .demo-grid{grid-template-columns:1fr; gap:32px;} }
+  .bars-stacked{display:flex; flex-direction:column; gap:13px;}
+  .bars-stacked .srow .top{display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:5px;}
+  .bars-stacked .srow .top .lbl{font-family:var(--font-display); font-size:13.5px; color:var(--on-navy-soft); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .bars-stacked .srow .top .val{font-family:var(--font-mono); font-size:12.5px; color:var(--on-navy); flex-shrink:0; font-variant-numeric:tabular-nums;}
+  .bars-stacked .srow .bar-track{height:7px;}
+  .demo-gender{
+    display:flex; gap:16px; font-family:var(--font-mono); font-size:12.5px; color:var(--on-navy-soft);
+    margin-top:16px; padding-top:14px; border-top:1px solid var(--on-navy-line);
+  }
+  .demo-gender b{color:var(--on-navy); font-weight:600;}
   .demo-note{font-family:var(--font-body); font-size:13.5px; color:var(--on-navy-soft); margin-top:16px; max-width:48ch; font-style:italic;}
 
   /* ================= POR QUE COLABORAR ================= */
@@ -513,22 +524,37 @@
 
     <div class="demo-grid">
       <div class="rv">
-        <div class="panel-title">Audiencia</div>
-        <div class="bars">
-          <div class="bar-row"><span class="lbl">Hombres</span><div class="bar-track"><div class="bar-fill" data-pct="81.3"></div></div><span class="val">81,3%</span></div>
-          <div class="bar-row"><span class="lbl">Mujeres</span><div class="bar-track"><div class="bar-fill" data-pct="18.7"></div></div><span class="val">18,7%</span></div>
-          <div class="bar-row"><span class="lbl">25–44 años</span><div class="bar-track"><div class="bar-fill teal" data-pct="59.7"></div></div><span class="val">59,7%</span></div>
-          <div class="bar-row"><span class="lbl">45–54 años</span><div class="bar-track"><div class="bar-fill teal" data-pct="23.9"></div></div><span class="val">23,9%</span></div>
+        <div class="panel-title">Audiencia por edad</div>
+        <div class="bars-stacked">
+          <div class="srow"><div class="top"><span class="lbl">18–24</span><span class="val">4,8%</span></div><div class="bar-track"><div class="bar-fill" data-pct="4.8"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">25–34</span><span class="val">28,5%</span></div><div class="bar-track"><div class="bar-fill" data-pct="28.5"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">35–44</span><span class="val">30,9%</span></div><div class="bar-track"><div class="bar-fill" data-pct="30.9"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">45–54</span><span class="val">24,4%</span></div><div class="bar-track"><div class="bar-fill" data-pct="24.4"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">55–64</span><span class="val">9,0%</span></div><div class="bar-track"><div class="bar-fill" data-pct="9.0"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">65+</span><span class="val">2,1%</span></div><div class="bar-track"><div class="bar-fill" data-pct="2.1"></div></div></div>
         </div>
-        <p class="demo-note">Público mayoritariamente adulto (25–54 años) con perfil de comprador de material ciclista de gama alta.</p>
+        <div class="demo-gender"><span><b>81,3%</b> hombres</span><span><b>18,7%</b> mujeres</span></div>
+        <p class="demo-note">Público mayoritariamente adulto (25–54 años, 83,8%) con perfil de comprador de material ciclista de gama alta.</p>
       </div>
       <div class="rv rv2">
-        <div class="panel-title">Ubicación de la comunidad</div>
-        <div class="bars">
-          <div class="bar-row"><span class="lbl">España</span><div class="bar-track"><div class="bar-fill" data-pct="80.1"></div></div><span class="val">80,1%</span></div>
-          <div class="bar-row"><span class="lbl">Barcelona</span><div class="bar-track"><div class="bar-fill teal" data-pct="18.6"></div></div><span class="val">18,6%</span></div>
-          <div class="bar-row"><span class="lbl">Terrassa/Sabadell</span><div class="bar-track"><div class="bar-fill teal" data-pct="4.4"></div></div><span class="val">4,4%</span></div>
-          <div class="bar-row"><span class="lbl">Valencia</span><div class="bar-track"><div class="bar-fill teal" data-pct="2.8"></div></div><span class="val">2,8%</span></div>
+        <div class="panel-title">Top países</div>
+        <div class="bars-stacked">
+          <div class="srow"><div class="top"><span class="lbl">España</span><span class="val">80,4%</span></div><div class="bar-track"><div class="bar-fill teal" data-pct="80.4"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Estados Unidos</span><span class="val">2,0%</span></div><div class="bar-track"><div class="bar-fill teal" data-pct="2.0"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">México</span><span class="val">1,8%</span></div><div class="bar-track"><div class="bar-fill teal" data-pct="1.8"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Argentina</span><span class="val">1,4%</span></div><div class="bar-track"><div class="bar-fill teal" data-pct="1.4"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Colombia</span><span class="val">1,2%</span></div><div class="bar-track"><div class="bar-fill teal" data-pct="1.2"></div></div></div>
+        </div>
+        <p class="demo-note">Alcance internacional incipiente más allá de España — comunidad de habla hispana.</p>
+      </div>
+      <div class="rv rv3">
+        <div class="panel-title">Top ciudades</div>
+        <div class="bars-stacked">
+          <div class="srow"><div class="top"><span class="lbl">Barcelona</span><span class="val">17,5%</span></div><div class="bar-track"><div class="bar-fill" data-pct="17.5"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Santa Coloma de Gramenet</span><span class="val">2,9%</span></div><div class="bar-track"><div class="bar-fill" data-pct="2.9"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Valencia</span><span class="val">2,8%</span></div><div class="bar-track"><div class="bar-fill" data-pct="2.8"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Terrassa</span><span class="val">2,4%</span></div><div class="bar-track"><div class="bar-fill" data-pct="2.4"></div></div></div>
+          <div class="srow"><div class="top"><span class="lbl">Sabadell</span><span class="val">2,1%</span></div><div class="bar-track"><div class="bar-fill" data-pct="2.1"></div></div></div>
         </div>
         <p class="demo-note">Comunidad local en Barcelona / Cataluña — presencial, no solo alcance digital.</p>
       </div>
