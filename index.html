@@ -79,16 +79,7 @@
     box-shadow:0 1px 0 rgba(255,255,255,0.06);
   }
   .logo-lockup{display:flex; align-items:center; gap:10px;}
-  .logo-mark{
-    font-family:var(--font-logo); font-weight:700; font-size:22px;
-    color:var(--on-navy); letter-spacing:-0.01em; line-height:1;
-  }
-  .logo-x{color:var(--coral); font-family:var(--font-display); font-weight:700; font-size:14px;}
-  .logo-sub{
-    font-family:var(--font-display); font-weight:600; font-size:9.5px;
-    letter-spacing:0.14em; color:var(--on-navy-soft); text-transform:uppercase;
-    display:block; margin-top:1px;
-  }
+  .logo-img{height:34px; width:auto; border-radius:4px; display:block;}
   nav.links{display:flex; align-items:center; gap:30px;}
   nav.links a{
     font-family:var(--font-display); font-weight:600; font-size:14.5px;
@@ -364,7 +355,7 @@
     border-top:1px solid var(--on-navy-line);
   }
   .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
-  .footer-inner .logo-lockup .logo-mark{font-size:18px;}
+  .footer-inner .logo-lockup .logo-img{height:26px;}
   .footer-links{display:flex; gap:22px; font-family:var(--font-display); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;}
   .footer-links a:hover{color:var(--coral);}
   .footer-copy{font-family:var(--font-mono); font-size:11.5px; color:var(--ink-faint);}
@@ -387,10 +378,7 @@
 
 <header class="site-nav" id="siteNav">
   <a href="#hero" class="logo-lockup">
-    <div>
-      <span class="logo-mark">mdnss<span class="logo-x">×</span></span>
-      <span class="logo-sub">The Cycling Madness</span>
-    </div>
+    <img class="logo-img" src="assets/mdnss-logo.png" alt="MDNSS — The Cycling Madness">
   </a>
   <nav class="links" id="navLinks">
     <a href="#quienes">Quiénes somos</a>
@@ -414,7 +402,7 @@
       <a href="#alcance" class="btn-ghost">Ver los números</a>
     </div>
     <div class="hero-stats rv rv4">
-      <div class="hstat"><span class="n" data-count="4615">0</span><span class="l">Seguidores IG</span></div>
+      <div class="hstat"><span class="n" data-count="4974">0</span><span class="l">Seguidores IG</span></div>
       <div class="hstat"><span class="n" data-count="1.56" data-suffix="M">0</span><span class="l">Reproducciones / 90 días</span></div>
       <div class="hstat"><span class="n" data-count="75.1" data-suffix="%">0</span><span class="l">Alcance no-seguidores</span></div>
       <div class="hstat"><span class="n" data-count="4">0</span><span class="l">Retos propios / temporada</span></div>
@@ -432,7 +420,7 @@
         <p class="rv rv2">The Cycling Madness nace de una idea sencilla: hacer de las salidas en bici algo más — una experiencia. Retos de un día, autoimpuestos, con ruta y formato inventados por la propia comunidad en Barcelona.</p>
         <p class="rv rv3">Siempre buscamos aportar valor a nuestra comunidad — por eso colaboramos con marcas que entienden el ciclismo, la comunidad y las experiencias de la misma manera que nosotros. No para estar presentes: para formar parte de lo que hacemos.</p>
         <div class="mini-stats rv rv3">
-          <div class="mstat"><span class="n">4.615</span><span class="l">Seguidores IG</span></div>
+          <div class="mstat"><span class="n">4.974</span><span class="l">Seguidores IG</span></div>
           <div class="mstat"><span class="n">1,56M</span><span class="l">Vistas / 90 días</span></div>
           <div class="mstat"><span class="n">4</span><span class="l">Retos propios</span></div>
         </div>
@@ -498,7 +486,7 @@
     </div>
 
     <div class="stat-row-big rv">
-      <div class="bstat"><span class="n" data-count="4615">0</span><span class="l">Seguidores</span><span class="sub">+175,5% en 90 días</span></div>
+      <div class="bstat"><span class="n" data-count="4974">0</span><span class="l">Seguidores</span><span class="sub">@thecyclingmadness</span></div>
       <div class="bstat"><span class="n" data-count="1.56" data-suffix="M">0</span><span class="l">Reproducciones · 90 días</span><span class="sub">@thecyclingmadness</span></div>
       <div class="bstat"><span class="n" data-count="86278">0</span><span class="l">Interacciones</span><span class="sub">Likes · comentarios · shares · saves</span></div>
       <div class="bstat"><span class="n" data-count="75.1" data-suffix="%">0</span><span class="l">Alcance no-seguidores</span><span class="sub">Contenido fuera del círculo propio</span></div>
@@ -699,10 +687,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="logo-lockup">
-      <div>
-        <span class="logo-mark">mdnss<span class="logo-x">×</span></span>
-        <span class="logo-sub">The Cycling Madness</span>
-      </div>
+      <img class="logo-img" src="assets/mdnss-logo.png" alt="MDNSS — The Cycling Madness">
     </div>
     <div class="footer-links">
       <a href="#quienes">Quiénes somos</a>
