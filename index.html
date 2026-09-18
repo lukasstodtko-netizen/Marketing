@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDNSS — The Cycling Madness · Media Kit</title>
+<meta name="description" content="Media Kit de The Cycling Madness (MDNSS): comunidad ciclista de Barcelona, alcance real y formatos de colaboración para marcas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1f36'/%3E%3Ccircle cx='30' cy='68' r='16' fill='none' stroke='%23ef7b54' stroke-width='8'/%3E%3Ccircle cx='70' cy='68' r='16' fill='none' stroke='%23ef7b54' stroke-width='8'/%3E%3Cpath d='M30 68 L48 32 L70 68 M40 48 L62 48' fill='none' stroke='%23f5f2e8' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{color-scheme:light}
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  :root{
+    --navy:#0d1f36;
+    --navy-2:#142c48;
+    --navy-3:#1b3a5c;
+    --paper:#f7f4ec;
+    --card:#ffffff;
+    --ink:#101c2c;
+    --ink-soft:#51606f;
+    --ink-faint:#8b96a1;
+    --line:#e1dbc9;
+    --coral:#ef7b54;
+    --coral-deep:#d85f3b;
+    --teal:#a9d6d9;
+    --teal-deep:#5f9498;
+    --on-navy:#f5f2e8;
+    --on-navy-soft:#aebbca;
+    --on-navy-line:rgba(245,242,232,0.14);
+    --on-navy-card:#16314f;
+    --font-display:'Barlow Condensed', Arial, sans-serif;
+    --font-logo:'Baloo 2', var(--font-display);
+    --font-body:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
+    --container:1120px;
+  }
+
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  section{position:relative;}
+  .wrap{max-width:var(--container);margin:0 auto;padding:0 28px;}
+
+  ::selection{background:var(--coral);color:var(--on-navy);}
+
+  /* ---------- Reveal ---------- */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+  .rv.in{opacity:1;transform:translateY(0);}
+  .rv2{transition-delay:.08s;}
+  .rv3{transition-delay:.16s;}
+  .rv4{transition-delay:.24s;}
+
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px;
+    background:rgba(13,31,54,0.0);
+    backdrop-filter:blur(0px);
+    transition:background .35s ease, backdrop-filter .35s ease, padding .35s ease, box-shadow .35s ease;
+  }
+  header.site-nav.scrolled{
+    background:rgba(13,31,54,0.86);
+    backdrop-filter:blur(10px);
+    padding:12px 28px;
+    box-shadow:0 1px 0 rgba(255,255,255,0.06);
+  }
+  .logo-lockup{display:flex; align-items:center; gap:10px;}
+  .logo-mark{
+    font-family:var(--font-logo); font-weight:700; font-size:22px;
+    color:var(--on-navy); letter-spacing:-0.01em; line-height:1;
+  }
+  .logo-x{color:var(--coral); font-family:var(--font-display); font-weight:700; font-size:14px;}
+  .logo-sub{
+    font-family:var(--font-display); font-weight:600; font-size:9.5px;
+    letter-spacing:0.14em; color:var(--on-navy-soft); text-transform:uppercase;
+    display:block; margin-top:1px;
+  }
+  nav.links{display:flex; align-items:center; gap:30px;}
+  nav.links a{
+    font-family:var(--font-display); font-weight:600; font-size:14.5px;
+    letter-spacing:0.03em; text-transform:uppercase; color:var(--on-navy-soft);
+    transition:color .2s ease;
+  }
+  nav.links a:hover{color:var(--on-navy);}
+  .btn-cta{
+    font-family:var(--font-display); font-weight:700; font-size:14px;
+    letter-spacing:0.03em; text-transform:uppercase;
+    background:var(--coral); color:#1b0d06;
+    padding:10px 20px; border-radius:100px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform .2s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-cta:hover{background:var(--on-navy); transform:translateY(-1px);}
+  .btn-ghost{
+    font-family:var(--font-display); font-weight:700; font-size:14px;
+    letter-spacing:0.03em; text-transform:uppercase;
+    border:1.5px solid var(--on-navy-line); color:var(--on-navy);
+    padding:10px 20px; border-radius:100px; display:inline-flex; align-items:center; gap:8px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .btn-ghost:hover{border-color:var(--coral); background:rgba(239,123,84,0.08);}
+  .nav-toggle{display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; padding:6px;}
+  .nav-toggle span{width:22px; height:2px; background:var(--on-navy); display:block;}
+
+  /* ---------- Eyebrow / headings ---------- */
+  .eyebrow{
+    font-family:var(--font-display); font-weight:700; font-size:13px;
+    letter-spacing:0.16em; text-transform:uppercase; color:var(--coral);
+    display:flex; align-items:center; gap:10px; margin-bottom:14px;
+  }
+  .eyebrow .dash{width:30px; height:2px; background:var(--coral); display:inline-block;}
+  .eyebrow.on-navy{color:var(--teal);}
+  .eyebrow.on-navy .dash{background:var(--teal);}
+
+  .sec-head{max-width:640px; margin-bottom:44px;}
+  .sec-num{
+    font-family:var(--font-mono); font-size:13px; color:var(--ink-faint); font-weight:500;
+  }
+  h2.sec-title{
+    font-family:var(--font-display); font-weight:800; text-transform:uppercase;
+    font-size:clamp(30px,4.4vw,46px); line-height:1.02; letter-spacing:-0.01em;
+    margin:6px 0 14px; color:var(--ink);
+  }
+  h2.sec-title.on-navy{color:var(--on-navy);}
+  .sec-lede{font-size:16.5px; color:var(--ink-soft); max-width:56ch;}
+  .sec-lede.on-navy{color:var(--on-navy-soft);}
+
+  section{padding:100px 0;}
+  @media (max-width:640px){ section{padding:70px 0;} }
+
+  /* ================= HERO ================= */
+  #hero{
+    background:radial-gradient(120% 90% at 15% -10%, #1a3a5c 0%, var(--navy) 55%, #081422 100%);
+    color:var(--on-navy);
+    min-height:100vh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:150px 0 60px;
+    overflow:hidden;
+  }
+  #hero::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:
+      radial-gradient(600px 400px at 88% 8%, rgba(239,123,84,0.20), transparent 60%),
+      radial-gradient(500px 380px at 100% 92%, rgba(169,214,217,0.14), transparent 60%);
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .hero-kicker{
+    font-family:var(--font-mono); font-size:13px; letter-spacing:0.06em; color:var(--teal);
+    border:1px solid var(--on-navy-line); border-radius:100px; padding:7px 16px;
+    display:inline-flex; align-items:center; gap:8px; margin-bottom:28px;
+  }
+  .hero-kicker .dot{width:7px; height:7px; border-radius:50%; background:var(--coral); display:inline-block;}
+  h1.hero-title{
+    font-family:var(--font-display); font-weight:800; text-transform:uppercase;
+    font-size:clamp(46px,9vw,108px); line-height:0.94; letter-spacing:-0.015em;
+    max-width:16ch;
+  }
+  h1.hero-title .accent{color:var(--coral);}
+  .hero-title .x{color:var(--teal); font-size:0.6em; vertical-align:middle;}
+  .hero-dek{
+    font-size:19px; color:var(--on-navy-soft); max-width:52ch; margin:26px 0 40px;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:64px;}
+
+  .hero-stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--on-navy-line);
+    border:1px solid var(--on-navy-line); border-radius:6px; overflow:hidden;
+  }
+  .hstat{background:rgba(255,255,255,0.02); padding:20px 18px;}
+  .hstat .n{
+    font-family:var(--font-mono); font-weight:600; font-size:clamp(20px,2.6vw,30px);
+    color:var(--on-navy); display:block; font-variant-numeric:tabular-nums;
+  }
+  .hstat .l{
+    display:block; font-family:var(--font-display); font-size:11.5px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--on-navy-soft); margin-top:3px;
+  }
+  @media (max-width:760px){ .hero-stats{grid-template-columns:repeat(2,1fr);} }
+
+  .scroll-cue{
+    position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+    font-family:var(--font-mono); font-size:11px; color:var(--on-navy-soft);
+    display:flex; flex-direction:column; align-items:center; gap:8px; letter-spacing:0.08em;
+  }
+  .scroll-cue .line{width:1px; height:34px; background:linear-gradient(var(--coral), transparent); animation:cue 1.8s ease-in-out infinite;}
+  @keyframes cue{0%{opacity:.2;transform:scaleY(.4);transform-origin:top;} 50%{opacity:1;transform:scaleY(1);transform-origin:top;} 100%{opacity:.2;transform:scaleY(.4);transform-origin:top;}}
+
+  /* ================= QUIENES SOMOS ================= */
+  #quienes{background:var(--paper);}
+  .quienes-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:start;}
+  @media (max-width:860px){ .quienes-grid{grid-template-columns:1fr; gap:40px;} }
+  .pull{
+    font-family:var(--font-display); font-weight:700; font-size:clamp(24px,3vw,34px);
+    line-height:1.18; color:var(--ink); margin:0 0 22px;
+  }
+  .pull .hl{color:var(--coral);}
+  .quienes-grid p{color:var(--ink-soft); font-size:16.5px; margin-bottom:16px; max-width:56ch;}
+  .mini-stats{display:flex; gap:0; margin-top:30px; border-top:1px solid var(--line);}
+  .mstat{flex:1; padding:18px 18px 0 0; border-right:1px solid var(--line);}
+  .mstat:last-child{border-right:none;}
+  .mstat .n{font-family:var(--font-mono); font-weight:600; font-size:26px; color:var(--coral-deep); display:block;}
+  .mstat .l{display:block; font-family:var(--font-display); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); margin-top:2px;}
+
+  .side-card{
+    background:var(--card); border:1px solid var(--line); border-left:3px solid var(--coral);
+    border-radius:4px; padding:26px 26px;
+  }
+  .side-card h3{
+    font-family:var(--font-display); font-weight:700; font-size:13px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--coral-deep); margin-bottom:10px;
+  }
+  .side-card p{color:var(--ink-soft); font-size:15.5px; margin-bottom:0; max-width:none;}
+
+  /* ================= QUE ES MDNSS — niveles ================= */
+  #niveles{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .niveles-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden; margin-bottom:40px;}
+  @media (max-width:900px){ .niveles-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .niveles-grid{grid-template-columns:1fr;} }
+  .nivel{background:var(--paper); padding:30px 24px; display:flex; flex-direction:column; gap:14px;}
+  .nivel .ico{width:38px; height:38px; color:var(--coral);}
+  .nivel .kicker{font-family:var(--font-mono); font-size:12px; color:var(--ink-faint);}
+  .nivel h4{font-family:var(--font-display); font-weight:700; font-size:19px; text-transform:uppercase; color:var(--ink); letter-spacing:0.01em;}
+  .nivel p{color:var(--ink-soft); font-size:14.5px;}
+  .nivel .tag{
+    align-self:flex-start; font-family:var(--font-display); font-size:10.5px; font-weight:700;
+    letter-spacing:0.06em; text-transform:uppercase; color:var(--teal-deep); background:rgba(169,214,217,0.28);
+    padding:3px 9px; border-radius:100px;
+  }
+
+  .callout-teal{
+    background:var(--teal); background:linear-gradient(135deg, #bfe4e6, #9fd0d3);
+    border-radius:6px; padding:28px 30px; margin-top:4px;
+  }
+  .callout-teal h4{font-family:var(--font-display); font-weight:700; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:#123a3c; margin-bottom:10px;}
+  .callout-teal p{color:#1d4547; font-size:15.5px; margin-bottom:10px; max-width:70ch;}
+  .callout-teal p:last-child{margin-bottom:0;}
+  .callout-teal strong{color:#0c2b2d;}
+
+  /* ================= ALCANCE ================= */
+  #alcance{
+    background:linear-gradient(180deg, var(--navy) 0%, #0a1929 100%);
+    color:var(--on-navy);
+  }
+  .stat-row-big{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--on-navy-line); border:1px solid var(--on-navy-line); border-radius:6px; overflow:hidden;
+    margin-bottom:56px;
+  }
+  @media (max-width:760px){ .stat-row-big{grid-template-columns:repeat(2,1fr);} }
+  .bstat{background:var(--on-navy-card); padding:26px 22px;}
+  .bstat .n{font-family:var(--font-mono); font-weight:600; font-size:clamp(24px,3vw,36px); color:var(--on-navy); display:block; font-variant-numeric:tabular-nums;}
+  .bstat .l{display:block; font-family:var(--font-display); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--on-navy-soft); margin-top:4px;}
+  .bstat .sub{display:block; font-family:var(--font-mono); font-size:12px; color:var(--coral); margin-top:8px;}
+
+  .alcance-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; margin-bottom:56px;}
+  @media (max-width:800px){ .alcance-grid{grid-template-columns:1fr; gap:36px;} }
+  .panel-title{font-family:var(--font-display); font-weight:700; font-size:15px; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:18px;}
+  .bars{display:flex; flex-direction:column; gap:14px;}
+  .bar-row{display:grid; grid-template-columns:110px 1fr 84px; align-items:center; gap:12px;}
+  .bar-row .lbl{font-family:var(--font-display); font-size:14px; color:var(--on-navy-soft);}
+  .bar-track{height:9px; background:rgba(255,255,255,0.08); border-radius:100px; overflow:hidden;}
+  .bar-fill{height:100%; border-radius:100px; background:linear-gradient(90deg, var(--coral), var(--coral-deep)); width:0%; transition:width 1.1s cubic-bezier(.2,.7,.2,1);}
+  .bar-fill.teal{background:linear-gradient(90deg, var(--teal), var(--teal-deep));}
+  .bar-row .val{font-family:var(--font-mono); font-size:13.5px; color:var(--on-navy); text-align:right; font-variant-numeric:tabular-nums;}
+
+  .demo-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  @media (max-width:800px){ .demo-grid{grid-template-columns:1fr; gap:36px;} }
+  .demo-note{font-family:var(--font-body); font-size:13.5px; color:var(--on-navy-soft); margin-top:16px; max-width:48ch; font-style:italic;}
+
+  /* ================= POR QUE COLABORAR ================= */
+  #colaborar{background:var(--paper);}
+  .pillars{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:56px;}
+  @media (max-width:820px){ .pillars{grid-template-columns:1fr; } }
+  .pillar{
+    background:var(--card); border:1px solid var(--line); border-radius:6px; padding:30px 26px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .pillar:hover{transform:translateY(-4px); box-shadow:0 16px 30px -18px rgba(16,28,44,0.35); border-color:var(--coral);}
+  .pillar .ico{width:40px; height:40px; color:var(--coral); margin-bottom:16px;}
+  .pillar h4{font-family:var(--font-display); font-weight:700; font-size:20px; text-transform:uppercase; margin-bottom:10px; color:var(--ink);}
+  .pillar p{color:var(--ink-soft); font-size:15px;}
+
+  .objetivos{display:grid; grid-template-columns:1fr 1fr; gap:0 40px;}
+  @media (max-width:700px){ .objetivos{grid-template-columns:1fr;} }
+  .objetivos li{
+    display:flex; gap:14px; align-items:flex-start; padding:16px 0; border-top:1px solid var(--line); font-size:15.5px; color:var(--ink);
+  }
+  .objetivos li .dash{width:20px; height:2px; background:var(--coral); margin-top:11px; flex-shrink:0;}
+
+  /* ================= FORMATOS ================= */
+  #formatos{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .formatos-list{display:flex; flex-direction:column;}
+  .formato{
+    display:grid; grid-template-columns:90px 1.1fr 1.4fr; gap:28px; align-items:start;
+    padding:34px 0; border-top:1px solid var(--line);
+  }
+  .formato:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:800px){ .formato{grid-template-columns:1fr; gap:14px;} }
+  .formato .fnum{font-family:var(--font-mono); font-size:34px; color:var(--line); font-weight:600;}
+  .formato .fhead .tag{
+    font-family:var(--font-display); font-size:11px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase;
+    color:var(--coral-deep); background:rgba(239,123,84,0.12); padding:3px 10px; border-radius:100px; display:inline-block; margin-bottom:10px;
+  }
+  .formato h4{font-family:var(--font-display); font-weight:700; font-size:23px; text-transform:uppercase; color:var(--ink);}
+  .formato .fmeta{font-family:var(--font-mono); font-size:12.5px; color:var(--ink-faint); margin-top:6px;}
+  .formato .fbody p{color:var(--ink-soft); font-size:15.5px; margin-bottom:10px;}
+  .formato .fexample{
+    font-family:var(--font-mono); font-size:12.5px; color:var(--teal-deep); background:rgba(169,214,217,0.18);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-top:4px;
+  }
+
+  /* ================= ENTREGABLES ================= */
+  #entregables{background:var(--paper);}
+  .entregables-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  @media (max-width:760px){ .entregables-grid{grid-template-columns:1fr; gap:40px;} }
+  .entregables-grid h4{
+    font-family:var(--font-display); font-weight:700; font-size:14px; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--coral-deep); border-bottom:2px solid var(--coral); padding-bottom:10px; margin-bottom:18px; display:inline-block;
+  }
+  .check-list li{
+    display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-top:1px solid var(--line); font-size:15.5px; color:var(--ink);
+  }
+  .check-list li:first-child{border-top:none;}
+  .check-list li svg{width:18px; height:18px; color:var(--teal-deep); flex-shrink:0; margin-top:2px;}
+
+  /* ================= CONTACTO ================= */
+  #contacto{
+    background:radial-gradient(120% 100% at 85% 100%, #1a3a5c 0%, var(--navy) 55%, #081422 100%);
+    color:var(--on-navy); text-align:center;
+  }
+  #contacto .wrap{max-width:760px;}
+  .contact-eyebrow{justify-content:center;}
+  h2.contact-title{
+    font-family:var(--font-display); font-weight:800; text-transform:uppercase;
+    font-size:clamp(34px,6vw,64px); line-height:1.0; letter-spacing:-0.01em; margin:8px 0 20px; color:var(--on-navy);
+  }
+  .contact-title .accent{color:var(--coral);}
+  #contacto .sec-lede{margin:0 auto 40px;}
+  .contact-actions{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:56px;}
+  .contact-meta{
+    display:flex; justify-content:center; gap:10px 22px; flex-wrap:wrap;
+    font-family:var(--font-mono); font-size:12.5px; color:var(--on-navy-soft);
+    border-top:1px solid var(--on-navy-line); padding-top:24px;
+  }
+
+  footer.site-footer{
+    background:#081422; color:var(--on-navy-soft); padding:34px 0;
+    border-top:1px solid var(--on-navy-line);
+  }
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  .footer-inner .logo-lockup .logo-mark{font-size:18px;}
+  .footer-links{display:flex; gap:22px; font-family:var(--font-display); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;}
+  .footer-links a:hover{color:var(--coral);}
+  .footer-copy{font-family:var(--font-mono); font-size:11.5px; color:var(--ink-faint);}
+
+  /* ---------- Mobile nav ---------- */
+  @media (max-width:880px){
+    nav.links{
+      position:fixed; inset:0 0 0 auto; width:min(320px,80vw); height:100vh;
+      background:var(--navy); flex-direction:column; align-items:flex-start; justify-content:center;
+      gap:28px; padding:40px; transform:translateX(100%); transition:transform .35s ease; z-index:99;
+    }
+    nav.links.open{transform:translateX(0);}
+    nav.links a{font-size:20px;}
+    .nav-toggle{display:flex;}
+    header.site-nav .btn-cta.desktop-only{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <a href="#hero" class="logo-lockup">
+    <div>
+      <span class="logo-mark">mdnss<span class="logo-x">×</span></span>
+      <span class="logo-sub">The Cycling Madness</span>
+    </div>
+  </a>
+  <nav class="links" id="navLinks">
+    <a href="#quienes">Quiénes somos</a>
+    <a href="#niveles">Qué es MDNSS</a>
+    <a href="#alcance">Alcance</a>
+    <a href="#formatos">Formatos</a>
+    <a href="#contacto" class="btn-cta">Hablemos</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<section id="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-kicker"><span class="dot"></span>MEDIA KIT · BRAND PARTNERSHIPS</div>
+    <h1 class="hero-title rv">THE CYCLING <span class="accent">MADNESS</span></h1>
+    <p class="hero-dek rv rv2">Comunidad ciclista de Barcelona con alcance real, contenido de alto rendimiento y experiencias propias. Buscamos marcas que entiendan el ciclismo, la comunidad y las experiencias como nosotros — para construir algo juntos, no solo estar presentes.</p>
+    <div class="hero-actions rv rv3">
+      <a href="#contacto" class="btn-cta">Colaborar con MDNSS</a>
+      <a href="#alcance" class="btn-ghost">Ver los números</a>
+    </div>
+    <div class="hero-stats rv rv4">
+      <div class="hstat"><span class="n" data-count="4615">0</span><span class="l">Seguidores IG</span></div>
+      <div class="hstat"><span class="n" data-count="1.56" data-suffix="M">0</span><span class="l">Reproducciones / 90 días</span></div>
+      <div class="hstat"><span class="n" data-count="75.1" data-suffix="%">0</span><span class="l">Alcance no-seguidores</span></div>
+      <div class="hstat"><span class="n" data-count="4">0</span><span class="l">Retos propios / temporada</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
+</section>
+
+<section id="quienes">
+  <div class="wrap">
+    <div class="eyebrow rv"><span class="dash"></span>01 · Quiénes somos</div>
+    <div class="quienes-grid">
+      <div>
+        <p class="pull rv rv2">Porque al final, <span class="hl">Madness son las personas.</span></p>
+        <p class="rv rv2">The Cycling Madness nace de una idea sencilla: hacer de las salidas en bici algo más — una experiencia. Retos de un día, autoimpuestos, con ruta y formato inventados por la propia comunidad en Barcelona.</p>
+        <p class="rv rv3">Siempre buscamos aportar valor a nuestra comunidad — por eso colaboramos con marcas que entienden el ciclismo, la comunidad y las experiencias de la misma manera que nosotros. No para estar presentes: para formar parte de lo que hacemos.</p>
+        <div class="mini-stats rv rv3">
+          <div class="mstat"><span class="n">4.615</span><span class="l">Seguidores IG</span></div>
+          <div class="mstat"><span class="n">1,56M</span><span class="l">Vistas / 90 días</span></div>
+          <div class="mstat"><span class="n">4</span><span class="l">Retos propios</span></div>
+        </div>
+      </div>
+      <div class="side-card rv rv4">
+        <h3>Origen del nombre</h3>
+        <p>The Cycling Madness nace de crear experiencias propias — retos de un día, autoimpuestos, con ruta y formato inventados por MDNSS: cruzar comunidades enteras en bici, dar la vuelta a una isla en un solo día, o rodar toda la noche por el mismo circuito. Esa "locura" autoimpuesta es el origen de la marca — no un formato más entre otros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="niveles">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow rv"><span class="dash"></span>02 · Qué es MDNSS</div>
+      <h2 class="sec-title rv rv2">Una marca con cuatro capas, ya en marcha</h2>
+      <p class="sec-lede rv rv3">MDNSS no es solo un grupo de salidas o solo un equipo de carreras: es ambas cosas a la vez. Así es como se estructura la comunidad — y por dónde puede entrar una marca.</p>
+    </div>
+
+    <div class="niveles-grid">
+      <div class="nivel rv">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M6 17 L11 7 L17 17 M9 12 L15 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="kicker">01</span>
+        <h4>Nivel social</h4>
+        <p>Rutas y salidas abiertas, ritmo variable — punto de entrada para cualquier miembro de la comunidad.</p>
+      </div>
+      <div class="nivel rv rv2">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20 L9 8 L14 16 L17 10 L20 20" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="8" r="1.4" fill="currentColor" stroke="none"/></svg>
+        <span class="kicker">02</span>
+        <h4>Experience / Reto propio</h4>
+        <p>Retos de un día inventados por MDNSS: racing, superación y experiencia de grupo, en formato masivo o en grupo pequeño.</p>
+        <span class="tag">Origen de la marca</span>
+      </div>
+      <div class="nivel rv rv3">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12 h4 l3 -7 4 14 3 -7 h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="kicker">03</span>
+        <h4>Gran fondo</h4>
+        <p>Colaboración con organizadores de gran fondos: MDNSS viaja y compite junto como equipo, no como individuos sueltos.</p>
+      </div>
+      <div class="nivel rv rv4">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 4h8v4a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5a2 2 0 0 0 2 4M16 6h3a2 2 0 0 1-2 4M12 12v4M9 20h6M10 16h4v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="kicker">04</span>
+        <h4>Competición federada</h4>
+        <p>Corredores de MDNSS ya compiten en categoría federada — una realidad actual de la marca, no un objetivo futuro.</p>
+      </div>
+    </div>
+
+    <div class="callout-teal rv">
+      <h4>Diferencia clave</h4>
+      <p><strong>Las cuatro capas ya están en marcha</strong> — comunidad, experiences/retos propios, gran fondos en equipo y competición federada. La comunidad de MDNSS es, ante todo, presencial y de Barcelona: rutas semanales y quedadas reales en la ciudad, no solo alcance en redes.</p>
+      <p>Usamos el nombre MDNSS como <strong>punto de encuentro</strong> entre personas distintas que comparten una misma pasión — y como plataforma para que una marca entre en cualquiera de las cuatro capas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="alcance">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow on-navy rv"><span class="dash"></span>03 · Comunidad y alcance</div>
+      <h2 class="sec-title on-navy rv rv2">Comunidad pequeña, alcance real</h2>
+      <p class="sec-lede on-navy rv rv3">Datos de Instagram de los últimos 90 días. El contenido se ve muy por encima del número de seguidores — no es alcance comprado.</p>
+    </div>
+
+    <div class="stat-row-big rv">
+      <div class="bstat"><span class="n" data-count="4615">0</span><span class="l">Seguidores</span><span class="sub">+175,5% en 90 días</span></div>
+      <div class="bstat"><span class="n" data-count="1.56" data-suffix="M">0</span><span class="l">Reproducciones · 90 días</span><span class="sub">@thecyclingmadness</span></div>
+      <div class="bstat"><span class="n" data-count="86278">0</span><span class="l">Interacciones</span><span class="sub">Likes · comentarios · shares · saves</span></div>
+      <div class="bstat"><span class="n" data-count="75.1" data-suffix="%">0</span><span class="l">Alcance no-seguidores</span><span class="sub">Contenido fuera del círculo propio</span></div>
+    </div>
+
+    <div class="alcance-grid">
+      <div class="rv">
+        <div class="panel-title">Reproducciones por tipo de contenido</div>
+        <div class="bars">
+          <div class="bar-row"><span class="lbl">Reels</span><div class="bar-track"><div class="bar-fill" data-pct="100"></div></div><span class="val">962.123</span></div>
+          <div class="bar-row"><span class="lbl">Stories</span><div class="bar-track"><div class="bar-fill" data-pct="37"></div></div><span class="val">354.003</span></div>
+          <div class="bar-row"><span class="lbl">Publicaciones</span><div class="bar-track"><div class="bar-fill" data-pct="25"></div></div><span class="val">243.481</span></div>
+        </div>
+      </div>
+      <div class="rv rv2">
+        <div class="panel-title">Interacciones por tipo</div>
+        <div class="bars">
+          <div class="bar-row"><span class="lbl">Reels</span><div class="bar-track"><div class="bar-fill teal" data-pct="100"></div></div><span class="val">78.190</span></div>
+          <div class="bar-row"><span class="lbl">Publicaciones</span><div class="bar-track"><div class="bar-fill teal" data-pct="7"></div></div><span class="val">5.734</span></div>
+          <div class="bar-row"><span class="lbl">Stories</span><div class="bar-track"><div class="bar-fill teal" data-pct="3"></div></div><span class="val">2.354</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-grid">
+      <div class="rv">
+        <div class="panel-title">Audiencia</div>
+        <div class="bars">
+          <div class="bar-row"><span class="lbl">Hombres</span><div class="bar-track"><div class="bar-fill" data-pct="81.3"></div></div><span class="val">81,3%</span></div>
+          <div class="bar-row"><span class="lbl">Mujeres</span><div class="bar-track"><div class="bar-fill" data-pct="18.7"></div></div><span class="val">18,7%</span></div>
+          <div class="bar-row"><span class="lbl">25–44 años</span><div class="bar-track"><div class="bar-fill teal" data-pct="59.7"></div></div><span class="val">59,7%</span></div>
+          <div class="bar-row"><span class="lbl">45–54 años</span><div class="bar-track"><div class="bar-fill teal" data-pct="23.9"></div></div><span class="val">23,9%</span></div>
+        </div>
+        <p class="demo-note">Público mayoritariamente adulto (25–54 años) con perfil de comprador de material ciclista de gama alta.</p>
+      </div>
+      <div class="rv rv2">
+        <div class="panel-title">Ubicación de la comunidad</div>
+        <div class="bars">
+          <div class="bar-row"><span class="lbl">España</span><div class="bar-track"><div class="bar-fill" data-pct="80.1"></div></div><span class="val">80,1%</span></div>
+          <div class="bar-row"><span class="lbl">Barcelona</span><div class="bar-track"><div class="bar-fill teal" data-pct="18.6"></div></div><span class="val">18,6%</span></div>
+          <div class="bar-row"><span class="lbl">Terrassa/Sabadell</span><div class="bar-track"><div class="bar-fill teal" data-pct="4.4"></div></div><span class="val">4,4%</span></div>
+          <div class="bar-row"><span class="lbl">Valencia</span><div class="bar-track"><div class="bar-fill teal" data-pct="2.8"></div></div><span class="val">2,8%</span></div>
+        </div>
+        <p class="demo-note">Comunidad local en Barcelona / Cataluña — presencial, no solo alcance digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="colaborar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow rv"><span class="dash"></span>04 · Por qué colaborar</div>
+      <h2 class="sec-title rv rv2">Lo que una marca se lleva</h2>
+      <p class="sec-lede rv rv3">Cada colaboración se plantea como un capítulo de una misma narrativa: comunidad, producto, aventura y contenido audiovisual.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar rv">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20 L9 8 L14 16 L17 10 L20 20" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="8" r="1.4" fill="currentColor" stroke="none"/></svg>
+        <h4>Experience</h4>
+        <p>La marca integrada en experiencias ciclistas reales y memorables, diseñadas y organizadas por MDNSS — no un banner en un evento ajeno.</p>
+      </div>
+      <div class="pillar rv rv2">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="14" height="11" rx="2"/><path d="M17 10 L21 7.5 V17.5 L17 15" stroke-linejoin="round"/></svg>
+        <h4>Content</h4>
+        <p>Producción audiovisual pensada para redes sociales — reels, fotografía y stories reutilizables durante toda la temporada.</p>
+      </div>
+      <div class="pillar rv rv3">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke-linecap="round"/></svg>
+        <h4>Community</h4>
+        <p>Acceso directo a una comunidad ciclista activa, participativa y en crecimiento en Barcelona.</p>
+      </div>
+    </div>
+
+    <ul class="objetivos">
+      <li class="rv"><span class="dash"></span>Diseñar experiencias ciclistas reales de la mano de la marca.</li>
+      <li class="rv rv2"><span class="dash"></span>Producir contenido audiovisual reutilizable para redes sociales.</li>
+      <li class="rv rv3"><span class="dash"></span>Aumentar la visibilidad de la marca dentro de una comunidad activa y de alto alcance real.</li>
+      <li class="rv rv4"><span class="dash"></span>Presentar producto en un contexto de uso real, no de estudio.</li>
+      <li class="rv"><span class="dash"></span>Generar contenido reutilizable fuera de temporada.</li>
+      <li class="rv rv2"><span class="dash"></span>Construir una narrativa conjunta, capítulo a capítulo.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="formatos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow rv"><span class="dash"></span>05 · Formatos de colaboración</div>
+      <h2 class="sec-title rv rv2">Cuatro formas de activar una marca</h2>
+      <p class="sec-lede rv rv3">Los mismos cuatro niveles de la comunidad, ahora como formatos de activación. Cada uno se adapta al tamaño y objetivo de la colaboración.</p>
+    </div>
+
+    <div class="formatos-list">
+      <div class="formato rv">
+        <div class="fnum">01</div>
+        <div class="fhead">
+          <span class="tag">Social ride</span>
+          <h4>Salida social</h4>
+          <div class="fmeta">100–200 km · grupo abierto · reel + stories</div>
+        </div>
+        <div class="fbody">
+          <p>Rutas abiertas con ritmo variable, punto de entrada para la comunidad — ideal para presentar producto a un grupo amplio en un entorno relajado, con desayuno o avituallamiento de marca.</p>
+          <span class="fexample">Ejemplo: 100–200 km · hasta 100 participantes</span>
+        </div>
+      </div>
+
+      <div class="formato rv rv2">
+        <div class="fnum">02</div>
+        <div class="fhead">
+          <span class="tag">Origen de la marca</span>
+          <h4>Experiencia propia</h4>
+          <div class="fmeta">Reto de un día · grupo reducido · alta producción</div>
+        </div>
+        <div class="fbody">
+          <p>Retos de un día autoimpuestos, con ruta y formato inventados por MDNSS — el ADN de la marca. Máxima intensidad narrativa y de contenido, con grupo reducido y muy comprometido.</p>
+          <span class="fexample">Ejemplo: 300+ km en un día · 10–20 participantes</span>
+        </div>
+      </div>
+
+      <div class="formato rv rv3">
+        <div class="fnum">03</div>
+        <div class="fhead">
+          <span class="tag">Producto en competición</span>
+          <h4>Gran fondo</h4>
+          <div class="fmeta">Marchas cicloturistas reconocidas · equipo MDNSS</div>
+        </div>
+        <div class="fbody">
+          <p>MDNSS viaja y compite como equipo en gran fondos de referencia — la marca aparece en contexto real de esfuerzo y competición, no en un escaparate.</p>
+          <span class="fexample">Ejemplo: 200–320 km · marchas de prestigio nacional/internacional</span>
+        </div>
+      </div>
+
+      <div class="formato rv rv4">
+        <div class="fnum">04</div>
+        <div class="fhead">
+          <span class="tag">Contexto de carrera</span>
+          <h4>Competición federada</h4>
+          <div class="fmeta">Categoría federada · visibilidad en carrera real</div>
+        </div>
+        <div class="fbody">
+          <p>Corredores de MDNSS compitiendo en categoría federada — visibilidad de marca en el contexto más exigente y creíble del ciclismo de competición.</p>
+          <span class="fexample">Ejemplo: calendario de copa regional/nacional</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="entregables">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow rv"><span class="dash"></span>06 · Activación y entregables</div>
+      <h2 class="sec-title rv rv2">Qué recibe la marca en cada evento</h2>
+      <p class="sec-lede rv rv3">Cada experiencia genera presencia de marca antes, durante y después del evento. Entregables estándar por evento, ajustables según la colaboración.</p>
+    </div>
+
+    <div class="entregables-grid">
+      <div class="rv">
+        <h4>Por evento</h4>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>1 vídeo / reel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>10 fotografías editadas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Stories durante el evento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Presencia previa en redes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Branding de marca integrado en la experiencia</li>
+        </ul>
+      </div>
+      <div class="rv rv2">
+        <h4>Narrativa de temporada</h4>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Experiencias, sociales y gran fondos como capítulos de una misma historia</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Presencia continuada en la comunidad MDNSS</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Partner principal de temporada, no aparición puntual</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Contenido reutilizable fuera de temporada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="eyebrow on-navy contact-eyebrow rv"><span class="dash"></span>07 · Hablemos</div>
+    <h2 class="contact-title rv rv2">Construyamos el próximo <span class="accent">capítulo</span> juntos</h2>
+    <p class="sec-lede on-navy rv rv3">Escríbenos y te mandamos el calendario de experiencias de la temporada, cifras detalladas y propuestas de colaboración a medida.</p>
+    <div class="contact-actions rv rv4">
+      <a href="mailto:colabs@thecyclingmadness.com" class="btn-cta">colabs@thecyclingmadness.com</a>
+      <a href="https://instagram.com/thecyclingmadness" target="_blank" rel="noopener" class="btn-ghost">@thecyclingmadness</a>
+    </div>
+    <div class="contact-meta rv">
+      <span>THE CYCLING MADNESS</span><span>·</span><span>BARCELONA</span><span>·</span><span>MEDIA KIT 2026/27</span>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="logo-lockup">
+      <div>
+        <span class="logo-mark">mdnss<span class="logo-x">×</span></span>
+        <span class="logo-sub">The Cycling Madness</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#alcance">Alcance</a>
+      <a href="#formatos">Formatos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="footer-copy">© 2026 THE CYCLING MADNESS · BARCELONA</div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('siteNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  }, {passive:true});
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.rv');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el => io.observe(el));
+
+  // Bar fill animation
+  const bars = document.querySelectorAll('.bar-fill');
+  const barIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.dataset.pct + '%';
+        barIo.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.3});
+  bars.forEach(b => barIo.observe(b));
+
+  // Count-up numbers
+  function formatNum(v, decimals) {
+    return decimals > 0 ? v.toFixed(decimals).replace('.', ',') : Math.round(v).toLocaleString('es-ES');
+  }
+  const counters = document.querySelectorAll('[data-count]');
+  const countIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const decimals = el.dataset.count.includes('.') ? 2 : 0;
+      const dur = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = formatNum(target * eased, decimals) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      countIo.unobserve(el);
+    });
+  }, {threshold:0.4});
+  counters.forEach(c => countIo.observe(c));
+</script>
+
+</body>
+</html>
